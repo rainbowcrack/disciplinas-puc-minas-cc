@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+// analisar o erro, ver se eh o arquivo que precisa sem compilado junto ao codigo ou precisa criar um loop while
 // atividade do módulo 04 - exercício 02 por Izabel Oliveira da Paz Chaves (1º período de C.C)
 // programa interativo para mostrar os dados do user pelo JOptionPane
 public class C04EX02 {
