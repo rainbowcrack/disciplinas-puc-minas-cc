@@ -1,6 +1,6 @@
 import java.util.Scanner;
-// atividade do módulo 03 - exercício 03 por Izabel Oliveira da Paz Chaves (1º período de C.C)
-// programa que calcula a hipotenusa, a partir do teorema de pitágoras
+// atividade do modulo 03 - exercicio 03 por Izabel Oliveira da Paz Chaves (1 periodo de C.C)
+// programa que calcula a hipotenusa, a partir do teorema de pitagoras
 public class C03EX03 {
     public static void main(String[] args) {
         double hipotenusa, cateto1, cateto2;
