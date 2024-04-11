@@ -1,20 +1,20 @@
 import java.util.Scanner;
 public class C03EX02 {
-    // função: Calcula a média de 3 números inteiros
-    // atividade do módulo 03 - exercício 02 por Izabel Oliveira da Paz Chaves (1º período de C.C)
+    // funcao: Calcula a media de 3 numeros inteiros
+    // atividade do modulo 03 - exercicio 02 por Izabel Oliveira da Paz Chaves (1 periodo de C.C)
     public static void main(String[] args) {
         long n1, n2, n3, soma;
         double media;
         Scanner teclado = new Scanner(System.in);
-        System.out.print("Informe um número: ");
+        System.out.print("Informe um numero: ");
         n1 = teclado.nextLong();
-        System.out.print("Informe outro número: ");
+        System.out.print("Informe outro numero: ");
         n2 = teclado.nextLong();
-        System.out.print("Informe mais um número: "); 
+        System.out.print("Informe mais um numero: "); 
         n3 = teclado.nextLong();
         soma = n1 + n2 + n3;
         media = soma / 3.0;
-        System.out.println("Média = " + media);
+        System.out.println("Media = " + media);
         teclado.close(); 
     }
 }
