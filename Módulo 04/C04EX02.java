@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-// atividade do módulo 04 - exercício 02 por Izabel Oliveira da Paz Chaves (1º período de C.C)
+// atividade do modulo 04 - exercicio 02 por Izabel Oliveira da Paz Chaves (1 periodo de C.C)
 // programa para criar uma ficha funcional a partir dos dados do user
 public class C04EX02 {
     public static void main(String[] args) {
