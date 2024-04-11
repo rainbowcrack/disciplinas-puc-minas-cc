@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-// atividade do módulo 04 - exercício 02 por Izabel Oliveira da Paz Chaves (1º período de C.C)
+// atividade do módulo 04 - exercício 03 por Izabel Oliveira da Paz Chaves (1º período de C.C)
 // programa para criar uma tabela sobre o poluente emitido e sua relacao a multa aplicada
 public class C04EX03 {
     public static void main(String[] args) {
@@ -28,5 +28,6 @@ public class C04EX03 {
         System.out.print("\n___________________________________________");
         System.out.printf("\nAcima de " + p_maior + " multa de R$%1.2f", multa3);
         System.out.print(" por poluente emitido" + "\n___________________________________________");
+        teclado.close();
     }
 }
