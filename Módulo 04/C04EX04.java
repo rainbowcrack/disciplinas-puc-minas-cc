@@ -1,6 +1,6 @@
 import javax.swing.JOptionPane;
 
-// atividade do módulo 04 - exercício 02 por Izabel Oliveira da Paz Chaves (1º período de C.C)
+// atividade do modulo 04 - exercicio 02 por Izabel Oliveira da Paz Chaves (1 periodo de C.C)
 // programa interativo para mostrar os dados do user pelo JOptionPane
 public class C04EX04 {
     public static void main(String[] args) {
