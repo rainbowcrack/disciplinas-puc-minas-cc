@@ -22,7 +22,7 @@ public class C04EX03 {
         System.out.println("___________________________________________");
         System.out.print(
                 "Quantidade de Poluente Emitido x Valor da Multa" + "\n___________________________________________");
-        System.out.printf("\nAté " + p_menor + " multa de R$%1.2f", multa1);
+        System.out.printf("\nAte " + p_menor + " multa de R$%1.2f", multa1);
         System.out.print("\n___________________________________________");
         System.out.printf("\nEntre " + p_menor + " e " + p_maior + " multa de R$%1.2f", multa2);
         System.out.print("\n___________________________________________");
