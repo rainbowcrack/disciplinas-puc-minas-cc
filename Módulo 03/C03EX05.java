@@ -1,8 +1,8 @@
 import java.util.Scanner;
 public class C03EX05 {
     public static void main(String[] args) {
-        // atividade do módulo 03 - exercício 05 por Izabel Oliveira da Paz Chaves (1º período de C.C)
-        // programa que calcula a idade do user no ano inserido, baseado na subtração do nascimento
+        // atividade do modulo 03 - exercicio 05 por Izabel Oliveira da Paz Chaves (1 periodo de C.C)
+        // programa que calcula a idade do user no ano inserido, baseado na subtracao do nascimento
         String nome;
         int anoNasc, anoAtual, idade;
         Scanner teclado = new Scanner(System.in);
@@ -13,7 +13,7 @@ public class C03EX05 {
         System.out.print("Digite o ano em que estamos: ");
         anoAtual = teclado.nextInt();
         idade = anoAtual - anoNasc;
-        System.out.println(nome+", você tem/terá "+idade+" anos em "+anoAtual);
+        System.out.println(nome+", você tem/tera "+idade+" anos em "+anoAtual);
         teclado.close();
     }
 }
