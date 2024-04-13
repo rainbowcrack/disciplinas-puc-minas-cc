@@ -1,5 +1,5 @@
 import java.util.Scanner;
-// atividade do modulo 05 - exercicio 09 por Izabel Oliveira da Paz Chaves (1 periodo de C.C)
+// atividade do modulo 05 - exercicio 10 por Izabel Oliveira da Paz Chaves (1 periodo de C.C)
 // programa que imprime um numero de 5 digitos em vertical
 public class C05EX10 {
    public static void main(String[] args){
