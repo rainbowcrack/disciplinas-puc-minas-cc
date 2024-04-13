@@ -1,4 +1,5 @@
 import java.util.Scanner;
+// atividade do modulo 05 - exercicio 10 por Izabel Oliveira da Paz Chaves (1 periodo de C.C)
 // programa para ler o numero do cheque bancario
 public class C05EX11 {
    public static void main(String[] args){
