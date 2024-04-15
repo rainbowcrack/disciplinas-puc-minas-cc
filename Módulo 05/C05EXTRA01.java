@@ -13,12 +13,17 @@ public class C05EXTRA01 {
         n2 = numero / 100 % 10;
         n3 = numero / 10 % 10;
         n4 = numero % 10;
-        // logica e output
+        // logica e output 
+        // condicional aprendida no conteudo 06
         if (n1 == n4) {
             if (n2 == n3) {
                 System.out.print("O numero " + numero + " e um palindromo.");
             }
-        } else {
+            else {
+                System.out.print("O numero " + numero + " nao e um palindromo.");
+            }
+        }
+        else {
             System.out.print("O numero " + numero + " nao e um palindromo.");
         }
         teclado.close();
