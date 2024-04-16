@@ -17,7 +17,7 @@ public class C06EX02 {
             System.out.print("Poluente = " + poluente + "\nMulta = R$3000,00");
 
         if (poluente > 3500)
-            System.out.printf("Poluente = " + poluente + "\nMulta =%.2f", multa);
+            System.out.printf("Poluente = " + poluente + "\nMulta = %.2f", multa);
         teclado.close();
     }
 }
