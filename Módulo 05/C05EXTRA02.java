@@ -12,7 +12,7 @@ public class C05EXTRA02 {
         System.out.print("E o valor da velocidade em m/s: ");
         velocidade = teclado.nextDouble();
         // operacao e output
-        tempo = segundos * (1/Math.sqrt(1-(Math.pow(velocidade,2) / Math.pow(300000000,2))));
+        tempo = segundos * (1/Math.sqrt(1-(Math.pow(velocidade,2) / Math.pow(300000000,2)))); // formula a partir da constante c da velocidade da luz
         System.out.printf("T = %1.4f", tempo);
         teclado.close();
     }
