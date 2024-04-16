@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-// atividade do modulo 06 - exercicio extra 01 por Izabel Oliveira da Paz Chaves (1 periodo de C.C)
+// atividade do modulo 06 - exercicio 01 por Izabel Oliveira da Paz Chaves (1 periodo de C.C)
 // programa que retorna o valor de fx dado em um funcao
 public class C06EX01 {
     public static void main(String[] args){
