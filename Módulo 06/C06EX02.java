@@ -1,6 +1,6 @@
 import java.util.Scanner;
-// atividade do modulo 09 - exercicio 01 por Izabel Oliveira da Paz Chaves (1 periodo de C.C)
-// problemas sobre series matematicas baseadas em modelos ja prontos e looping
+// atividade do modulo 06 - exercicio 02 por Izabel Oliveira da Paz Chaves (1 periodo de C.C)
+// imprimir o valor da multa baseado na emissao de poluentes pela empresa
 public class C06EX02 {
     public static void main(String[] args){
         // declarar e atribuir variavel
@@ -14,11 +14,11 @@ public class C06EX02 {
         if (poluente <= 1500)
             System.out.print("Poluente = " + poluente + "\nMulta = R$0" );
 
-        if (poluente > 1500 && poluente <= 3500)
+        else if (poluente > 1500 && poluente <= 3500)
             System.out.print("Poluente = " + poluente + "\nMulta = R$3000,00");
 
-        if (poluente > 3500)
+        else 
             System.out.printf("Poluente = " + poluente + "\nMulta = %.2f", multa);
-        teclado.close();
+        teclado.close(); // fechar o teclado fora da condicional
     }
 }
