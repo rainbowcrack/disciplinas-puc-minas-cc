@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 // atividade do modulo 06 - exercicio 08 por Izabel Oliveira da Paz Chaves (1 periodo de C.C)
 // programa para calcular o peso minimo a partir da altura do user
-public class teste {
+public class C06EX08 {
     public static void main(String[] args) {
         // atribuicao e declarar variaveis
         String nome;
