@@ -1,0 +1,24 @@
+// Selection Sort
+
+/* 
+* Tamanho do vetor: 100
+* Tempo de execucao: 0 ms
+* Numero de comparacoes: 4950
+* Numero de movimentacoes: 294
+* -----------------------------------
+* Tamanho do vetor: 1000
+* Tempo de execucao: 5 ms
+* Numero de comparacoes: 499500
+* Numero de movimentacoes: 2964
+* -----------------------------------
+* Tamanho do vetor: 10000
+* Tempo de execucao: 113 ms
+* Numero de comparacoes: 49995000
+* Numero de movimentacoes: 29955
+* -----------------------------------
+* Tamanho do vetor: 100000
+* Tempo de execucao: 4509 ms
+* Numero de comparacoes: 4999950000
+* Numero de movimentacoes: 299943
+* ----------------------------------- 
+*/

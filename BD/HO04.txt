@@ -1,0 +1,34 @@
+Projetar o primeiro nome e o último nome dos atores de sexo feminino;
+A = σ gender = 'F' (actors)
+π first_name, last_name (A)
+
+Projetar o nome dos filmes com ano superior à 1999;
+A = σ year > 1999 (movies)
+π name (A)
+
+Projetar o nome do filme e o nome do diretor de cada filme;
+X = ρ idMovie ← id (movies)
+A = X ⨝ idMovie = movie_id movies_directors
+B = A ⨝ director_id = id directors
+π name, first_name, last_name (B)
+
+Projetar o nome do filme, nome do ator e o papel que cada ator teve no filme para filmes com ranking acima da nota 6;
+Y = σ rank > 6 (movies)
+X = ρ idMovie ← id (Y)
+A = X ⨝ idMovie = movie_id roles
+B = A ⨝ actor_id = id actors
+π name, first_name, last_name, role (B)
+
+Projetar o nome do diretor e o número de filmes que cada diretor dirigiu;
+A = γ director_id; count(movie_id) → Total(movies_directors)
+B = A ⨝ director_id = id directors
+π first_name, last_name, Total(B)
+
+Projetar o gênero e o número de filmes de cada gênero; 
+A = γ genre; count(movie_id) → Total(movies_genres)
+π genre, Total(A)
+
+Projetar o gênero, o ranking (nota) médio, mínimo e máximo dos filmes do gênero. 
+A = movies_genres ⨝ movie_id = id movies
+B = γ genre; avg(rank) → Media, min(rank) → Minimo, max(rank) → Maximo (A)
+π genre, Media, Minimo, Maximo (B)
