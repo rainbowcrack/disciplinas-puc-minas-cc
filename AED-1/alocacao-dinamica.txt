@@ -1,0 +1,71 @@
+O uso de dois ponteiros (**) para a alocação dinâmica de memória no C é necessário quando estamos lidando com matrizes bidimensionais (ou tabelas), como a matriz de respostas dos alunos, que é essencialmente um conjunto de vetores (linhas) de caracteres.
+
+Aqui está a explicação detalhada:
+
+1. Matriz Bidimensional em C
+Em C, uma matriz bidimensional pode ser vista como um vetor de vetores. No caso do nosso problema, precisamos de uma matriz onde cada linha corresponde às respostas de um aluno, e cada coluna corresponde à resposta de uma questão.
+
+Matriz estática: Se tivermos uma matriz com n_alunos linhas e n_questoes colunas, em uma versão estática, ela seria declarada assim:
+c
+Copiar código
+char respostas[n_alunos][n_questoes];  // Uma matriz estática
+Esta matriz tem o tipo char[n_alunos][n_questoes] e podemos acessá-la com dois índices, como respostas[i][j].
+
+2. Alocação Dinâmica:
+Agora, para alocar essa matriz dinamicamente (ou seja, sem saber o número de linhas e colunas em tempo de compilação), usamos malloc para criar um vetor de vetores (um vetor de ponteiros, onde cada ponteiro apontará para um vetor de respostas de cada aluno). É aqui que entra o uso do ponteiro duplo.
+
+Passo 1: Alocar um vetor de ponteiros (vetor de linhas)
+Primeiro, precisamos alocar memória para armazenar os ponteiros que apontarão para as linhas da matriz. Em termos de ponteiros, isso é feito assim:
+
+c
+Copiar código
+char **respostas = (char **)malloc(n_alunos * sizeof(char *));
+char **respostas é um ponteiro para ponteiros de char, ou seja, é um ponteiro que vai apontar para uma sequência de ponteiros, onde cada ponteiro (cada linha) será um vetor de caracteres (as respostas de um aluno).
+Passo 2: Alocar memória para cada linha (vetores de respostas dos alunos)
+Depois de alocar o vetor de ponteiros, precisamos alocar memória para cada linha da matriz, ou seja, para cada aluno armazenar suas respostas. Para isso, usamos outro malloc:
+
+c
+Copiar código
+for (int i = 0; i < n_alunos; i++) {
+    respostas[i] = (char *)malloc(n_questoes * sizeof(char));  // Aloca memória para cada linha
+}
+Aqui, respostas[i] é um ponteiro que aponta para um vetor de char de tamanho n_questoes, que armazenará as respostas de um aluno.
+
+3. Por que dois ponteiros?
+O primeiro ponteiro (char **respostas) é necessário porque estamos lidando com uma matriz bidimensional. Ou seja, a matriz é composta de várias linhas (vetores de char), e cada linha precisa ser alocada separadamente.
+O segundo ponteiro (em respostas[i]) é necessário para alocar individualmente o vetor de respostas de cada aluno. Cada aluno tem um vetor de respostas (com n_questoes elementos), e cada vetor precisa ser alocado dinamicamente.
+Visualizando a estrutura de memória:
+Imaginando que temos uma matriz de respostas com 3 alunos e 4 questões, ela seria algo assim:
+
+csharp
+Copiar código
+respostas = [
+  [a, b, c, d],  // Respostas do aluno 1
+  [b, a, c, d],  // Respostas do aluno 2
+  [a, b, a, d]   // Respostas do aluno 3
+]
+Com a alocação dinâmica, a memória seria organizada da seguinte forma:
+
+Alocação do vetor de ponteiros (respostas): Um vetor de 3 ponteiros para char (pois temos 3 alunos).
+Alocação de cada linha (respostas[i]): Cada ponteiro em respostas[i] irá apontar para um vetor de 4 caracteres (respostas de cada aluno para as 4 questões).
+Em código:
+Alocação do vetor de ponteiros:
+c
+Copiar código
+char **respostas = (char **)malloc(n_alunos * sizeof(char *));  // 3 ponteiros, para 3 alunos
+Alocação de cada linha (vetores de respostas de cada aluno):
+c
+Copiar código
+for (int i = 0; i < n_alunos; i++) {
+    respostas[i] = (char *)malloc(n_questoes * sizeof(char));  // Cada aluno tem 4 respostas
+}
+Assim, respostas[i][j] é acessado como um valor char (a resposta do aluno i na questão j).
+
+Resumo:
+O dois ponteiros (char **) são usados porque estamos criando uma matriz bidimensional dinamicamente em C. O primeiro ponteiro (char **) é para o vetor de ponteiros que representa as linhas da matriz (respostas de cada aluno), e o segundo ponteiro (char *) é para alocar as respostas de cada aluno, ou seja, cada linha da matriz.
+
+A alocação dinâmica é feita em duas etapas:
+
+Alocação do vetor de ponteiros.
+Alocação de cada linha (vetor de respostas) para cada aluno.
+Esse modelo é mais flexível e permite trabalhar com matrizes de dimensões variáveis, sem a necessidade de declarar o tamanho da matriz previamente.

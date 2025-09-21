@@ -1,0 +1,16 @@
+- Condicional e switch case
+- Iterativo x Recursivo
+- Recursivo direto e indireto
+- Vetor
+- Vetor de Ponteiros
+- Vetor de Objetos
+- Matrizes
+- Passagem por Referencia
+- Alocacao Dinamica
+- Ponteiro
+- Arquivos
+- Struct
+- Chave de Pesquisa
+- Introducao OO (Classes abstratas e concretas, Encapsulamento, Heranca, Polimorfismo)
+- Is a, Has a
+- Polimorfiso: Virtual e Override

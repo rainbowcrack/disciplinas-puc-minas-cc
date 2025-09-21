@@ -1,0 +1,13 @@
+Capitulo 1: Conceitos Basicos
+Capitulo 2: Paradigmas de Programacao
+Capitulo 3: Estrutura Sequencial
+Capitulo 4: Estrutura Condicional
+Capitulo 5: Estrutura de Repeticao
+Capitulo 6: Vetor
+Capitulo 7: Matriz
+Capitulo 8: Sub-rotina
+Capitulo 9: Manipulando cadeias de caracteres
+Capitulo 10: Registro
+Capitulo 11: Arquivo
+Capitulo 12: Introducao a programacao orientada a objetos
+Capitulo 13: Desafios
