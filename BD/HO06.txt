@@ -1,0 +1,34 @@
+-- HO07
+
+-- Projetar o gênero e o número de filmes de cada gênero; 
+SELECT A.genre, COUNT(*) as Total
+FROM movies_genres as A
+GROUP BY genre
+
+-- Projetar o gênero, o ranking (nota) médio, mínimo e máximo dos filmes do gênero.
+SELECT G.genre, AVG(M.rank) as Media, MIN(M.rank) as Min, Max(M.rank) as Max
+FROM movies_genres as G
+JOIN movies as M ON M.id = G.movie_id
+GROUP BY G.genre
+
+-- Projetar o nome do diretor e o número de filmes que cada diretor dirigiu;
+SELECT A.first_name, A.last_name, count(*) as Total
+FROM directors as A
+JOIN movies_directors as D ON D.director_id = A.id
+GROUP BY  A.first_name, A.last_name, A.id
+
+-- Projetar o nome do filme, nome do ator e o papel que cada ator teve no filme para filmes com ranking acima da nota 6; 
+SELECT 
+    m.name AS movie_name, 
+    a.first_name, 
+    a.last_name, 
+    r.role
+FROM 
+    movies AS m
+JOIN 
+    roles AS r ON m.id = r.movie_id
+JOIN 
+    actors AS a ON r.actor_id = a.id
+WHERE 
+    m.rank > 6 
+*/
