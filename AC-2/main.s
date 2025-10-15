@@ -18,9 +18,9 @@ main:
     slli t6, t1, 1      # 2y
     add s0, t5, t6      # 66y
 
-    add s1, t4, s0      # 12x + 66y
+    add s1, t4, s0      # 12x soma 66y
 
-    slli s1, s1, 2      # (12x + 66y) * 4
+    slli s1, s1, 2      # (12x soma 66y) mul 4
 
     addi a7, zero, 1
     addi a0, s1, 0
