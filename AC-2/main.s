@@ -2,38 +2,29 @@
 .globl main
 
 main:
-    li a7, 5
+    addi a7, zero, 5
     ecall
-    addi t0, a0, 0
+    addi t0, a0, 0      # x
 
-    li a7, 5
+    addi a7, zero, 5
     ecall
-    addi t1, a0, 0
+    addi t1, a0, 0      # y
 
-    li t2, 3
-    sll t3, t0, t2
+    slli t2, t0, 3      # 8x
+    slli t3, t0, 2      # 4x
+    add t4, t2, t3      # 12x
 
-    li t4, 2
-    sll t5, t0, t4
+    slli t5, t1, 6      # 64y
+    slli t6, t1, 1      # 2y
+    add s0, t5, t6      # 66y
 
-    add t6, t3, t5
+    add s1, t4, s0      # 12x + 66y
 
-    li t2, 6
-    sll t3, t1, t2
+    slli s1, s1, 2      # (12x + 66y) * 4
 
-    li t4, 1
-    sll t5, t1, t4
-
-    add t7, t3, t5
-
-    add t8, t6, t7
-
-    li t2, 2
-    sll t9, t8, t2
-
-    li a7, 1
-    addi a0, t9, 0
+    addi a7, zero, 1
+    addi a0, s1, 0
     ecall
 
-    li a7, 10
+    addi a7, zero, 10
     ecall
